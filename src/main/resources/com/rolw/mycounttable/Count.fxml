@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #87EED9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rolw.mycounttable.Count">
+    <children>
+        <Label layoutX="34.0" layoutY="28.0" text="CPU" />
+        <TextField fx:id="cpuid" layoutX="72.0" layoutY="24.0" />
+        <Label layoutX="30.0" layoutY="65.0" text="RAM" />
+        <ComboBox fx:id="ram_combo" layoutX="72.0" layoutY="61.0" prefHeight="24.0" prefWidth="171.0" />
+        <Label layoutX="31.0" layoutY="95.0" text="GPU" />
+        <TextField fx:id="gpuid" layoutX="72.0" layoutY="91.0" />
+        <TableView fx:id="tableView" layoutX="30.0" layoutY="151.0" prefHeight="200.0" prefWidth="525.0">
+            <columns>
+                <TableColumn fx:id="cpuColumn" prefWidth="178.0"  text="CPU" />
+                <TableColumn fx:id="ramColumn" prefWidth="179.0"  text="RAM" />
+                <TableColumn fx:id="gpuColumn" prefWidth="179.0"  text="GPU" />
+            </columns>
+        </TableView>
+        <Button fx:id="addList" layoutX="358.0" layoutY="24.0" mnemonicParsing="false" onAction="#addingMyList" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Add to List" textAlignment="CENTER" />
+    </children>
+</AnchorPane>
